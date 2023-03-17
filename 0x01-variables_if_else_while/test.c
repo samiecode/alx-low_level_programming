@@ -3,8 +3,9 @@
 int main(void)
 {
 	int n = 323212;
-
-	printf("%d\n",  n%10);
+	char ch  = 'A';
+	//printf("%d\n",  n%10);
+	putchar('A');
 	return  (0);
 }
 	    
