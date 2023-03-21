@@ -9,12 +9,13 @@
 void times_table(void)
 {
 	int n, i, multi;
+	:
 	for (n = 0; n <= 9; n++)
 	{
 		for (i = 0; i <= 9; i++)
 		{
 			multi = n * i;
-			if (multi < 10)
+			if (multi <= 9)
 				if (i != 9)
 					printf("%d,  ", multi);
 				else
