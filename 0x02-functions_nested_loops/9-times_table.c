@@ -15,18 +15,19 @@ void times_table(void)
 		for (i = 0; i <= 9; i++)
 		{
 			multi = n * i;
-			if (multi <= 9)
-				if (i != 9)
-					printf("%d,  ", multi);
+			if (i != 9)
+				if (i == 0)
+					printf("%d,", multi);
 				else
-					printf("%d", multi);
-			else if (multi > 9)
-			{
-				if (i != 9)
-					printf("%d, ", multi);
+					if (multi > 9)
+						printf(" %d,", multi);
+					else
+						printf("  %d,", multi);
+			else
+				if (multi == 0 || multi <= 9)
+					printf("  %d", multi);
 				else
-					printf("%d", multi);
-			}
+				printf(" %d", multi);
 		}
 		putchar('\n');
 	}

@@ -9,16 +9,25 @@
 void jack_bauer(void)
 {
 	int a, b, c, d;
+	int stop = 2359;
+	char st[20];
+	sprintf(st, "%d", stop);
 
-	for (a = 0; a < 3; a++)
+	for (a = 0; a <= 2; a++)
 	{
-		for (b = 0; b < 4; b++)
+		for (b = a; b <= 9; b++)
 		{
-			for (c = 0; c < 6; c++)
+			for (c = 0; c <= 5; c++)
 			{
 				for (d = 0; d < 10; d++)
 				{
-					printf("%d%d:%d%d \n", a, b, c, d);
+					char str[20];
+
+					sprintf(str, "%d""%d""%d""%d", a, b, c, d);
+					if (str == st)
+						break;
+					else
+						printf("%d%d:%d%d\n", a, b, c, d);
 				}
 			}
 		}
